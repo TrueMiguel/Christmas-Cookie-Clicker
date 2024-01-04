@@ -1,7 +1,7 @@
-# <Your-Project-Title>
+# Christmas Cookie Clicker Tycoon
 
 Website: URL
-![Screenshot](assets/images/png)
+![Screenshot](images/)
 
 ## Description
 
@@ -37,37 +37,34 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
-## Codes Used
-
-The code for the challenge can be found in the following file:
-
-- [index.html](/src/index.html): Contains the HTML structure of the landing page.
-
-- [style.css](/src/style.css): Contains the CSS styles for the landing page.
-
-- [script.js](/src/script.js): Contains the Javascript code of the landing page.
-
---------------------------
-
-- [file name](/src/file) LINE #: Based on the work of [AUTHOR](URL)
-
-```
-INSERT CODES HERE
-```
+[TrueMiguel](https://github.com/TrueMiguel) - Maldonado, Miguel
+[auom-eisiad](https://github.com/auom-eisiad) - Moua, Daisie
+[BenPalac1](https://github.com/BenPalac1) - Palacpac, Ben
+[AleSolis24](https://github.com/AleSolis24) - Reyes-solis, Alejandro
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License
 
----
+Copyright (c) 2023 Gabe Stroup
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ## Badges
 
