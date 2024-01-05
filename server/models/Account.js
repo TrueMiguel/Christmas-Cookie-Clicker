@@ -16,6 +16,7 @@ const AccountSchema = new Schema ({
   },
 });
 
+// Validate the password is the same as previously inputted or was modified
 AccountSchema.pre('save', async function (next) {
     if (!this.isModified('password')) {
       return next();
