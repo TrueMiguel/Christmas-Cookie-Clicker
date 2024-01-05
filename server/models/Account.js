@@ -16,12 +16,13 @@ const AccountSchema = new Schema ({
   },
 });
 
-// Validate the password is the same as previously inputted or was modified
+// Validate the password: hash it if it's modified or new
 AccountSchema.pre('save', async function (next) {
     if (!this.isModified('password')) {
       return next();
     }
 
+    // Hash the password with bcrypt and 8 salt rounds
     this.password = await bcrypt.hash(this.password, 8);
     next();
 });
