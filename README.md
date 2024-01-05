@@ -38,8 +38,11 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 ## Credits
 
 [TrueMiguel](https://github.com/TrueMiguel) - Maldonado, Miguel
+
 [auom-eisiad](https://github.com/auom-eisiad) - Moua, Daisie
+
 [BenPalac1](https://github.com/BenPalac1) - Palacpac, Ben
+
 [AleSolis24](https://github.com/AleSolis24) - Reyes-solis, Alejandro
 
 ## License

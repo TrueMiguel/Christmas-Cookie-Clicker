@@ -1,8 +1,8 @@
 {
-  "name": "christmas-cookie-clicker-tycoon",
+  "name": "client",
   "version": "1.0.0",
-  "description": "click click click",
-  "main": "index.js",
+  "description": "",
+  "main": "vite.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
