@@ -7,7 +7,7 @@
 // need to make a queries util for use with the useQuery for the profiles. 
 
 // importing link and useLocation for navigation
-import { Link, useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function Home() {
     // will use for later when checking data
@@ -19,7 +19,7 @@ export default function Home() {
         <div class="title">
             <h1>Christmas Cookie Clicker!</h1>
             <Link to="/game" > 
-            <button type="button" className="btn btn-success">Start Game!</button>
+                <button type="button" className="btn btn-success">Start Game!</button>
             </Link>
 
         </div>
