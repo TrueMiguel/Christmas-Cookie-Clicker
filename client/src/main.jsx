@@ -6,6 +6,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.jsx';
 import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home'
+import Game from './pages/GamePage.jsx'
+
+// importing bootstrap for additional stylings
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 const router = createBrowserRouter([
@@ -18,6 +22,10 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />
+            }, 
+            {
+                path: '/game',
+                element: <Game />
             }
         ]
     }
