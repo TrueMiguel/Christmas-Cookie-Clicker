@@ -31,8 +31,9 @@ async function updateUserScore(userId, clicks) {
   } catch (error) {
     console.error("Error updating user score:", error);
     throw new Error("Failed to update user score");
-  }
+  } asdf
 };
-// let see if this works 
+// let see if this works part 2
+
 
 module.exports = Score;
