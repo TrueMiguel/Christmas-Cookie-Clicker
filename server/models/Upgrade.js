@@ -2,25 +2,42 @@ const { Schema, model } = require('mongoose');
 
 // Schema for upgrade model
 const UpgradeSchema = new Schema({
-  cookie1: {
+  defaultCookie: {
+    type: Boolean,
+    required: true,
+    default: true,
+  },
+  nextCookie: {
     type: Boolean,
     required: true,
   },
-  cookie2: {
+  lastCookie: {
     type: Boolean,
     required: true,
   },
-  cookie3: {
-    type: Boolean,
-    required: true,
+
+  // Cookies' click value
+  defaultCookieClick: {
+    type: Number,
+    default: 100,
   },
-  cookie4: {
-    type: Boolean,
-    required: true,
+  nextCookieClick: {
+    type: Number,
+    default: 300,
   },
-  cookie5: {
-    type: Boolean,
-    required: true,
+  lastCookieClick: {
+    type: Number,
+    default: 9001, // IT'S OVER 9000!!
+  },
+
+  // Required clicks needed to upgrade to the next cookie
+  requiredClicksToNextCookie: {
+    type: Number,
+    default: 2000,
+  },
+  requiredClicksToLastCookie: {
+    type: Number,
+    default: 8000,
   },
 });
 
