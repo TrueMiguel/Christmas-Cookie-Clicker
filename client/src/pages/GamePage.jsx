@@ -2,12 +2,21 @@
 
 // importing link and useLocation for navigation
 import { Link } from "react-router-dom"
+import { useState } from "react";
 
 // importing the image
 import gingerbreadMan from '../assets/sc1.png'
 
 export default function Game() {
 
+    // initializing the score state
+    const [score, setScore] = useState(0);
+
+    const imgClick = () => {
+        // note to self, will need to use the useState hook for database
+        setScore(score + 1);
+        console.log('Img clicked')
+    }
 
 
     return (
@@ -17,13 +26,15 @@ export default function Game() {
 
                 {/* sub containers that will house the clicker on the left and the status/options on the right */}
                 <div id="clicker-side" className="col-9">
-                    <img src={gingerbreadMan} alt="gingerbread man" className="gb-m"/>
+                    <img src={gingerbreadMan} alt="gingerbread man" className="gb-m"
+                    onClick={imgClick}
+                    />
                 </div>
                 <div id="status-side" className="col-3">
                     <Link to="/">
                         <button type="button" className="btn btn-danger">Exit</button>
                     </Link>
-                    <div id="score" className="border border-dark"> Total score: 5000</div>
+                    <div id="score" className="border border-dark"> Total score: {score}</div>
                     {/* need to add line break here */}
 
                     <h2>Cookies:</h2>
