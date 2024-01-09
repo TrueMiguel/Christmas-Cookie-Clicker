@@ -39,13 +39,6 @@ const UpgradeSchema = new Schema({
     type: Number,
     default: 8000,
   },
-
-  // Ref to Click model
-  clicks: {
-    type: Schema.Types.ObjectId,
-    ref: 'Clicker',
-    required: true,
-  },
 });
 
 const Upgrade = model('Upgrade', UpgradeSchema);
