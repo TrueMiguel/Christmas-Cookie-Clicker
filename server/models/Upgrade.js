@@ -2,16 +2,26 @@ const { Schema, model } = require('mongoose');
 
 // Schema for upgrade model
 const UpgradeSchema = new Schema({
-  cookie1: {
+  defaultcookie: {
+    type: Boolean,
+    required: true,
+    default: true,
+  },
+  nextCookie: {
     type: Boolean,
     required: true,
   },
-  cookie2: {
+  lastCookie: {
     type: Boolean,
     required: true,
   },
-  cookie3: {
-    type: Boolean,
+  requiredClicks: {
+    type: Number,
+    default: 2000,
+  },
+  clicks: {
+    type: Schema.Types.ObjectId,
+    ref: 'Click',
     required: true,
   },
 });
