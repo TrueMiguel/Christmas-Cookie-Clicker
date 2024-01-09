@@ -49,7 +49,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 MIT License
 
-Copyright (c) 2023 Gabe Stroup
+Copyright (c) 2023 Miguel Maldonado, Daisie Moua, Ben Palacpac, Alejandro Reyes-solis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
