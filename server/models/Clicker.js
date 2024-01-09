@@ -12,7 +12,7 @@ const ClickerSchema = new Schema({
   upgrades: {
     // Use Upgrade schema directly
     type: Upgrade.schema, 
-    // Give value for cookies
+    // Give value for cookies to have upgrade model
     default: () => ({
       cookie1: false,
       cookie2: false,
