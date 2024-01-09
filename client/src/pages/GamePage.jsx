@@ -4,20 +4,30 @@
 import { Link } from "react-router-dom"
 import { useState } from "react";
 
+// adding the useScore and addScore mutatoin
+import { useMutation } from "@apollo/client";
+import { ADD_SCORE } from "../utils/queries";
+
 // importing the image
 import gingerbreadMan from '../assets/sc1.png'
 
 export default function Game() {
 
     // initializing the score state
-    const [score, setScore] = useState(0);
+     const [score, setScore] = useState(0);
+
+    // using score mutation
+    const [addScore, { data }] = useMutation(ADD_SCORE);
 
     const imgClick = () => {
         // note to self, will need to use the useState hook for database
         setScore(score + 1);
-        console.log('Img clicked')
+        console.log('Score: ', score)
     }
 
+    const handleAddScore = (newScore) => {
+        addScore({ variables: { score: newScore } });
+    }
 
     return (
         // main container that will house the game
@@ -34,6 +44,7 @@ export default function Game() {
                     <Link to="/">
                         <button type="button" className="btn btn-danger">Exit</button>
                     </Link>
+                    <button type="button" className="btn btn-success" onClick={() => handleAddScore(score)}>Save Score</button>
                     <div id="score" className="border border-dark"> Total score: {score}</div>
                     {/* need to add line break here */}
 
