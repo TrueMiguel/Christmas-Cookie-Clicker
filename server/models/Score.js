@@ -8,6 +8,7 @@ const ScoreSchema = new Schema({
     default: 0,
   }
 });
+
 const Score = model('Score', ScoreSchema);
 
 async function updateUserScore(userId, clicks) {

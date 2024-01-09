@@ -14,14 +14,6 @@ const UpgradeSchema = new Schema({
     type: Boolean,
     required: true,
   },
-  cookie4: {
-    type: Boolean,
-    required: true,
-  },
-  cookie5: {
-    type: Boolean,
-    required: true,
-  },
 });
 
 const Upgrade = model('Upgrade', UpgradeSchema);
