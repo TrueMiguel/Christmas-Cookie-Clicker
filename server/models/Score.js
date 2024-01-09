@@ -33,5 +33,6 @@ async function updateUserScore(userId, clicks) {
     throw new Error("Failed to update user score");
   }
 };
+// let see if this works 
 
 module.exports = Score;
