@@ -7,3 +7,12 @@
   transform: scale(0.95); /* Slightly scale down when clicked */
   transition: transform 0.1s; /* Smooth transition for the effect */
 }
+
+footer {
+  position: fixed; /* or use 'position: absolute;' if you want it absolute at the bottom */
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+}
