@@ -12,7 +12,7 @@ type Query {
 
 #mutation for adding score numbers
 type Mutation {
-    addScore: Score
+    addScore(score: Int!): Score
 }
 
 `;

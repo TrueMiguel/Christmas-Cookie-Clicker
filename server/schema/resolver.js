@@ -12,7 +12,7 @@ const resolvers = {
 
     // adding means of retrieving score data
     score: async () => {
-      return await Score.find({})
+      return await Score.findOne({})
     }
   },
   Mutation: { 
@@ -57,19 +57,24 @@ const resolvers = {
     // },
 
     // adding code for adding score
-    addScore: async () => {
-    
-      // find the existing score or crate a new one
-      let currentScore = await Score.findOne({});
-      if (!currentScore) {
-        currentScore = new Score({ score: 0 });
+    addScore: async (parent, args) => {
+      try {
+
+        // find the existing score or crate a new one
+        let currentScore = await Score.findOne({});
+        if (!currentScore) {
+          currentScore = new Score({ score: 0 });
+        }
+        
+        // increment and save the score
+        currentScore.score = args.score;
+        await currentScore.save();
+        
+        return currentScore;
       }
-
-      // increment and save the score
-      currentScore.score += 1;
-      await currentScore.save();
-
-      return currentScore;
+      catch(error) {
+        console.log(error);
+      }
     },
   },
 };
