@@ -35,6 +35,7 @@ export default function Game() {
         addScore({ variables: { score: newScore } });
     }
 
+    // use effect for updating the type of cookie and the cookie click value
     useEffect(() => {
         if (score === 1000) {
             setCookie(sugarCookie);
