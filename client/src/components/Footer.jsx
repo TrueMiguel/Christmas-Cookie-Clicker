@@ -1,4 +1,7 @@
 // may need to import useFunctions from react-router-dom if need be, and add react-router-dom to package.json 
+import React from 'react';
+
+
 
 const Footer = () => {
     //add functions here if need be
