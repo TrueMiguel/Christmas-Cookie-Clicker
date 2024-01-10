@@ -2,7 +2,7 @@
 
 // importing link and useLocation for navigation
 import { Link } from "react-router-dom"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // adding the useScore and addScore mutatoin
 import { useMutation } from "@apollo/client";
@@ -10,24 +10,45 @@ import { ADD_SCORE } from "../utils/queries";
 
 // importing the image
 import gingerbreadMan from '../assets/sc1.png'
+import sugarCookie from '../assets/sc2.png'
 
 export default function Game() {
 
     // initializing the score state
      const [score, setScore] = useState(0);
 
+     const [cookie, setCookie] = useState(gingerbreadMan);
+
+     const [bonus, setBonus] = useState(100);
+
     // using score mutation
     const [addScore, { data }] = useMutation(ADD_SCORE);
 
     const imgClick = () => {
         // note to self, will need to use the useState hook for database
-        setScore(score + 1);
+        setScore(score + bonus);
         console.log('Score: ', score)
     }
 
+    // Saving new score
     const handleAddScore = (newScore) => {
         addScore({ variables: { score: newScore } });
     }
+
+    useEffect(() => {
+        if (score === 1000) {
+            setCookie(sugarCookie);
+        }
+    }, [score])
+
+    useEffect(() => {
+        if (score === 1000) {
+            setBonus(300);
+        }
+        if (score === 10000) {
+            setBonus(800);
+        }
+    }, [cookie])
 
     return (
         // main container that will house the game
@@ -36,7 +57,7 @@ export default function Game() {
 
                 {/* sub containers that will house the clicker on the left and the status/options on the right */}
                 <div id="clicker-side" className="col-9">
-                    <img src={gingerbreadMan} alt="gingerbread man" className="gb-m"
+                    <img src={cookie} alt="gingerbread man" className="gb-m"
                     onClick={imgClick}
                     />
                 </div>
