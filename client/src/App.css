@@ -7,3 +7,7 @@
   transform: scale(0.95); /* Slightly scale down when clicked */
   transition: transform 0.1s; /* Smooth transition for the effect */
 }
+
+.loadingImg {
+  max-height: 90vh;
+}

@@ -11,8 +11,10 @@ type Query {
 }
 
 #mutation for adding score numbers
+#will have to update the score:Int! to id:ID!
 type Mutation {
     addScore(score: Int!): Score
+    deleteScore: Score
 }
 
 `;

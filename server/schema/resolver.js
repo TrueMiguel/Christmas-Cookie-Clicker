@@ -1,4 +1,3 @@
-//const { resolvers } = require(".");
 const { Account, Score } = require("../models/");
 
 const resolvers = {
@@ -12,7 +11,7 @@ const resolvers = {
 
     // adding means of retrieving score data
     score: async () => {
-      return await Score.findOne({})
+      return await Score.find({})
     }
   },
   Mutation: { 
@@ -76,6 +75,12 @@ const resolvers = {
         console.log(error);
       }
     },
+
+    // adding delete route for score
+    deleteScore: async (parent, args) => {
+
+      return Score.findOneAndDelete({})
+    }
   },
 };
 

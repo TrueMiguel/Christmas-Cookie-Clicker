@@ -31,3 +31,22 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_SCORE = gql`
+    mutation AddScore($score: Int!) {
+        addScore(score: $score) {
+            _id
+            score
+        }
+    }
+`;
+
+// in the future for passing for specific scores will need ($score:INT!)
+export const DELETE_SCORE = gql `
+    mutation DeleteScore {
+      deleteScore {
+        _id
+        score
+      }
+    }
+`;
