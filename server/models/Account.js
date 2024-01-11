@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const { ScoreSchema } = require ('./Score');
 
 // Schema for account model
 const AccountSchema = new Schema ({
@@ -13,9 +14,9 @@ const AccountSchema = new Schema ({
     type: String,
     required: true,
     trim: true,
-    midlength: 8,
-    maxlength: 8,
+    minlength: 4,
   },
+  score: ScoreSchema
 });
 
 // Validate the password: hash it if it's modified or new

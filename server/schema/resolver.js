@@ -2,12 +2,12 @@ const { Account, Score } = require("../models/");
 
 const resolvers = {
   Query: {
-    // users: async () => {
-    //   return Account.find(); 
-    // },
-    // user: async (parent, { userId }) => {
-    //   return Account.find({ _id: userId });
-    // },
+    accounts: async () => {
+      return Account.find(); 
+    },
+    account: async (parent, { userId }) => {
+      return Account.findOne({ _id: userId });
+    },
 
     // adding means of retrieving score data
     score: async () => {
@@ -15,14 +15,14 @@ const resolvers = {
     }
   },
   Mutation: { 
-    // addUser: async (parent, { username, password }) => {
-    //   try {
-    //     const newUser = await Account.create({ username, password });
-    //     return newUser;
-    //   } catch (error) {
-    //     throw new Error("Can not create user, please try again");
-    //   }
-    // },
+    addAccount: async (parent, { username, password }) => {
+      try {
+        const newUser = await Account.create({ username, password });
+        return newUser;
+      } catch (error) {
+        throw new Error("Can not create user, please try again");
+      }
+    },
     
     // updateUser: async (parent, { id, username }) => {
     //   try {
