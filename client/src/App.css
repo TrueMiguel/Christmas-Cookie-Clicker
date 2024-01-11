@@ -16,3 +16,16 @@ footer {
   padding: 10px;
   text-align: center;
 }
+
+footer {
+  position: fixed; /* or use 'position: absolute;' if you want it absolute at the bottom */
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+}
+
+.loadingImg {
+  max-height: 90vh;
+}

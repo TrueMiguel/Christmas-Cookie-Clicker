@@ -1,10 +1,10 @@
 import { gql } from '@apollo/client'
 
-export const ADD_SCORE = gql`
-    mutation AddScore($score: Int!) {
-        addScore(score: $score) {
-            id
+export const SINGLE_SCORE = gql `
+    query singleScore {
+        score {
+            _id
             score
         }
     }
-`;
+`
