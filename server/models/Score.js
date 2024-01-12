@@ -9,8 +9,12 @@ const ScoreSchema = new Schema({
   }
 });
 
+// removing the below model
 const Score = model('Score', ScoreSchema);
 
+module.exports = { Score, ScoreSchema };
+
+// will remove the code below upon further review.
 // async function updateUserScore(userId, clicks) {
 //   try {
 //     const userScore = await Score.findOne({ userId });
@@ -33,5 +37,3 @@ const Score = model('Score', ScoreSchema);
 //     throw new Error("Failed to update user score");
 //   }
 // };
-
-module.exports = Score;

@@ -1,5 +1,12 @@
 const typeDefs = `
-# creating typeDef for the score
+# creating typeDef for the score and account
+type Account {
+    _id: ID
+    username: String
+    password: String
+    score: Score!
+}
+
 type Score {
     _id:ID
     score: Int
@@ -7,7 +14,8 @@ type Score {
 
 #adding in query for score retrival
 type Query {
-    score: [Score]!
+    scores: [Score]!
+    accounts: [Account]!
 }
 
 #mutation for adding score numbers
@@ -18,6 +26,5 @@ type Mutation {
 }
 
 `;
-// this is a test ot see if it works
 
 module.exports = typeDefs;

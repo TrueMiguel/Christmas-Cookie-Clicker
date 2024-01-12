@@ -71,7 +71,11 @@ export default function Game() {
     return (
         // main container that will house the game
         <div className="container">
-            {loadQueryScore ? <div><img src={loadingImg} alt="sleeping Santa" className="loadingImg "/></div> : 
+            {loadQueryScore ? 
+            <div className="loadingContainer">
+            <div><img src={loadingImg} alt="sleeping Santa" className="loadingImg "/></div> 
+            </div>
+            : 
                 <div className="row">
 
                     {/* sub containers that will house the clicker on the left and the status/options on the right */}
