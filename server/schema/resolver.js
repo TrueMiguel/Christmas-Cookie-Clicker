@@ -1,27 +1,57 @@
 const { Account, Score } = require("../models/");
+const { signToken, AuthenticationError } = require('../utils/auth')
 
 const resolvers = {
   Query: {
     accounts: async () => {
       return Account.find(); 
     },
-    account: async (parent, { userId }) => {
-      return Account.findOne({ _id: userId });
+    account: async (parent, { username }) => {
+      return Account.findOne({ username: username });
     },
 
     // adding means of retrieving score data
-    score: async () => {
+    scores: async () => {
       return await Score.find({})
     }
   },
   Mutation: { 
     addAccount: async (parent, { username, password }) => {
       try {
-        const newUser = await Account.create({ username, password });
-        return newUser;
+        const user = await Account.create({ username, password });
+        const token = signToken(user)
+
+        return { token, user };
+
       } catch (error) {
         throw new Error("Can not create user, please try again");
       }
+
+    },
+
+    login :async (parent, { username, password }) => {
+      const account = await Account.findOne({ username })
+
+      if (!account) {
+        // will update terms to be ambigious, right now want to make sure the path works. 
+        throw AuthenticationError , console.log('Profile not found')
+      }
+
+      const correctPW = await account.isCorrectPassword(password);
+
+        // will update terms to be ambigious, right now want to make sure the path works. 
+
+      if (!correctPW) {
+        throw AuthenticationError , console.log('Password not correct')
+      }
+
+      const token = signToken(account)
+
+      return { token, account }
+    },
+
+    removeAccount: async (parent, { profileId }) => {
+      return Account.findOneAndDelete({ _id: profileId})
     },
     
     // updateUser: async (parent, { id, username }) => {

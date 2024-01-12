@@ -12,9 +12,16 @@ type Score {
     score: Int
 }
 
+#setting up a Auth type for handle profile creating or user login
+type Auth {
+    token: ID!
+    account: Account
+}
+
 #adding in query for score retrival
 type Query {
     scores: [Score]!
+    account(username: String!): Account
     accounts: [Account]!
 }
 
@@ -23,6 +30,13 @@ type Query {
 type Mutation {
     addScore(score: Int!): Score
     deleteScore: Score
+
+    #adding mutations to handle profile creation or logging in
+    addAccount(username: String!, password: String! ): Auth
+    login(username: String!, password: String!): Auth
+
+    #deleting account
+    removeAccount(id:ID!): Account
 }
 
 `;
