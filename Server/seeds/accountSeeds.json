@@ -2,12 +2,12 @@
     {
       "username": "test",
       "password": "1111",
-      "score" : {"score": 500}
+      "score" : {"score": 600}
     },
     {
       "username": "demo",
       "password": "2222",
-      "score": {"score": 2000}
+      "score": {"score": 2500}
     }
   ]
   

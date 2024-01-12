@@ -47,7 +47,7 @@ const Login= () => {
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+          <label htmlFor="pwd">Password (min 4 characters):</label>
           <input
             placeholder="******"
             name="password"
