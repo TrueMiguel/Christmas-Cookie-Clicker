@@ -11,7 +11,7 @@ const resolvers = {
     },
 
     // adding means of retrieving score data
-    score: async () => {
+    scores: async () => {
       return await Score.find({})
     }
   },
@@ -51,7 +51,7 @@ const resolvers = {
     },
 
     removeAccount: async (parent, { profileId }) => {
-      return Profile.findOneAndDelete({ _id: profileId})
+      return Account.findOneAndDelete({ _id: profileId})
     },
     
     // updateUser: async (parent, { id, username }) => {
