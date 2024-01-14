@@ -11,8 +11,6 @@ const db = require('./config/connection');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-const { authMiddleware } = require('./utils/auth');
-
 // setting up more server components
 const server = new ApolloServer({
     typeDefs,
@@ -35,9 +33,7 @@ const startApolloServer = async () => {
     
     }
 
-    app.use('/graphql', expressMiddleware(server, {
-      context: authMiddleware
-    }));
+    app.use('/graphql', expressMiddleware(server));
     
     db.once('open', () => {
         app.listen(PORT, () => {
