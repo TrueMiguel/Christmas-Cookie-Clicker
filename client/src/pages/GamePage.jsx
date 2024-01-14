@@ -16,7 +16,7 @@ import gingerbreadMan from '../assets/sc1.png'
 import sugarCookie from '../assets/sc2.png'
 import gingerbreadHouse from '../assets/sc3.png'
 import loadingImg from '../assets/loading.png'
-import Auth from '../utils/auth'
+import Auth from '../utils/auth.js'
 
 export default function Game() {
     // getting user name from auth

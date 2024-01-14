@@ -1,7 +1,7 @@
 // may need to import useFunctions from react-router-dom if need be, and add react-router-dom to package.json 
 // import React from 'react';
 import { Link } from 'react-router-dom';
-import Auth from '../utils/auth';
+import Auth from '../utils/auth.js';
 
 
 const Header = () => {

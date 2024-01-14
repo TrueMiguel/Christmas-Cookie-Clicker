@@ -10,7 +10,7 @@
 import { useMutation } from "@apollo/client";
 import { DELETE_SCORE } from "../utils/mutations";
 import { Link } from "react-router-dom";
-import auth from "../utils/auth";
+import auth from "../utils/auth.js";
 import { useEffect, useState } from "react";
 
 
