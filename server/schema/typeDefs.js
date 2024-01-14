@@ -4,7 +4,7 @@ type Account {
     _id: ID
     username: String
     password: String
-    score: Score!
+    score: Int
 }
 
 type Score {
@@ -28,8 +28,8 @@ type Query {
 #mutation for adding score numbers
 #will have to update the score:Int! to id:ID!
 type Mutation {
-    addScore(score: Int!): Score
-    deleteScore: Score
+    addScore(username: String!, score: Int!): Score
+    deleteScore(profileId: ID!): Score
 
     #adding mutations to handle profile creation or logging in
     addAccount(username: String!, password: String! ): Auth

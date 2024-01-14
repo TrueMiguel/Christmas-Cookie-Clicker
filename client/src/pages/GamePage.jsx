@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import { useState, useEffect } from "react";
 
 // adding the useScore and addScore mutation
-import { useMutation, useQuery } from "@apollo/client";
+import { useMutation, useLazyQuery } from "@apollo/client";
 import { ADD_SCORE } from "../utils/mutations";
 
 // adding the query for fetching the score 
@@ -16,30 +16,32 @@ import gingerbreadMan from '../assets/sc1.png'
 import sugarCookie from '../assets/sc2.png'
 import gingerbreadHouse from '../assets/sc3.png'
 import loadingImg from '../assets/loading.png'
+import Auth from '../utils/auth'
 
 export default function Game() {
+    // getting user name from auth
+    const username = Auth.getProfile()?.data.username;
 
     // initializing the score state
      const [score, setScore] = useState(0); 
 
-     const { loading: loadQueryScore, error, data: loadData } = useQuery(SINGLE_SCORE);
+     const [getScore, { loading: loadQueryScore, error, data: userData }] = useLazyQuery(SINGLE_SCORE, {variables: {username: username}});
 
      const [cookie, setCookie] = useState(gingerbreadMan);
 
      const [bonus, setBonus] = useState(100);
 
     // using score mutation
-    const [addScore, { loading: loadSaveScore, data: addScoreData }] = useMutation(ADD_SCORE);
+    const [addScore, { loading: loadSaveScore, error: addScoreError, data: addScoreData }] = useMutation(ADD_SCORE);
 
     const imgClick = () => {
         // note to self, will need to use the useState hook for database
         setScore(score + bonus);
-        console.log('Score: ', score)
     }
 
     // Saving new score
-    const handleAddScore = (newScore) => {
-        addScore({ variables: { score: newScore } });
+    const handleAddScore = (user, newScore) => {
+        addScore({ variables: { username: user, score: newScore } });
     }
 
     // use effect for updating the type of cookie and the cookie click value
@@ -61,12 +63,18 @@ export default function Game() {
         }
     }, [cookie])
 
+    useEffect(() => {
+        getScore({ variables: { username: username} });
+    }, [username, getScore]);
+
     useEffect (() => {
-        if(!loadQueryScore && loadData && loadData.score.length > 0) {
-            setScore(loadData.score[0].score);
-            console.log("loaded Score!", loadData);
+        if (!loadQueryScore && userData) {
+
+            if(userData.account && userData.account.score) {
+                setScore(userData.account.score);
+            }
         }
-    }, [loadQueryScore, loadData]); 
+    }, [loadQueryScore, userData]); 
 
     return (
         // main container that will house the game
@@ -89,7 +97,7 @@ export default function Game() {
                             <button type="button" className="btn btn-danger">Exit</button>
                         </Link>
                         {loadSaveScore ? <div>Saving</div> : 
-                            <button type="button" className="btn btn-success" onClick={() => handleAddScore(score)}>Save Score</button>
+                            <button type="button" className="btn btn-success" onClick={() => handleAddScore(username, score)}>Save Score</button>
                         }
                         <div id="score" className="border border-dark"> Total score: {score}</div>
                         {/* need to add line break here */}

@@ -12,21 +12,17 @@ export const LOGIN = gql`
   }
 `;
 
-export const ADD_USER = gql`
-  mutation addUser(
-    $firstName: String!
-    $lastName: String!
-    $email: String!
+export const ADD_ACCOUNT = gql`
+  mutation addAccount(
+    $username: String!
     $password: String!
   ) {
-    addUser(
-      firstName: $firstName
-      lastName: $lastName
-      email: $email
+    addAccount(
+      username: $username
       password: $password
     ) {
       token
-      user {
+      account {
         _id
       }
     }
@@ -34,8 +30,12 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_SCORE = gql`
-    mutation AddScore($score: Int!) {
-        addScore(score: $score) {
+    mutation AddScore(
+      $username: String!
+      $score: Int!) {
+        addScore(
+          username: $username
+          score: $score) {
             _id
             score
         }
@@ -44,8 +44,12 @@ export const ADD_SCORE = gql`
 
 // in the future for passing for specific scores will need ($score:INT!)
 export const DELETE_SCORE = gql `
-    mutation DeleteScore {
-      deleteScore {
+    mutation DeleteScore(
+      $profileId: ID!
+    ) {
+      deleteScore(
+        profileId: $profileId
+      ) {
         _id
         score
       }

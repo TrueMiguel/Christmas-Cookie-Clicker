@@ -4,7 +4,8 @@ import decode from 'jwt-decode';
 // creating auth service
 class AuthService {
   getProfile() {
-    return decode(this.getToken());
+    const profile = decode(this.getToken());
+    return profile;
   }
 
   loggedIn() {
@@ -15,7 +16,8 @@ class AuthService {
 
   getToken() {
     // Retrieves the user token from localStorage
-    return localStorage.getItem('id_token');
+    const token = localStorage.getItem('id_token');
+    return token;
   }
 
   login(idToken) {
@@ -29,7 +31,7 @@ class AuthService {
     // Clear user token and profile data from localStorage
     localStorage.removeItem('id_token');
     // this will reload the page and reset the state of the application
-    window.location.assign('/');
+    window.location.assign('/login');
   }
 }
 

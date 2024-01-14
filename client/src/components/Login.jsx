@@ -7,7 +7,7 @@ import Auth from '../utils/auth';
 
 const Login= () => {
   const [formState, setFormState] = useState({ username: '', password: '' });
-  const [login, { error }] = useMutation(LOGIN);
+  const [login, { loading, error }] = useMutation(LOGIN);
   
   // update form state based on current input changes
   const handleChange = (event) => {
@@ -57,7 +57,7 @@ const Login= () => {
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password (min 4 characters):</label>
+          <label htmlFor="pwd">Password:</label>
           <input
             placeholder="****"
             name="password"
@@ -71,9 +71,11 @@ const Login= () => {
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         ) : null}
+        {loading ? <div>Signing in...</div> : 
         <div className="flex-row flex-end">
           <button type="submit">Submit</button>
         </div>
+        }
       </form>
     </div>
   );
