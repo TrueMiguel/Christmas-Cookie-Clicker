@@ -84,15 +84,25 @@ The application has a responsive and polished UI.
 
 The application is accessible on various devices and screen sizes.
 
+
 ## Installation
 
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
+
 ## Usage
+Provide instructions and examples for use. Include screenshots as needed.
+To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-### Screenshots
+    ```md
+    ![alt text](assets/images/screenshot.png)
+    ```
+(placeholder)
 
-Wire Fram Drafts:
+
+## Screenshots
+
+### Wire Fram Drafts:
 
 ![cookie click bones](https://github.com/TrueMiguel/Christmas-Cookie-Clicker-Tycoon/assets/139652929/8f4683f2-e43d-491e-a427-c4d15430bdc9)
 
@@ -100,30 +110,28 @@ Wire Fram Drafts:
 
 ![image](https://github.com/TrueMiguel/Christmas-Cookie-Clicker-Tycoon/assets/139652929/e378bf8a-f8e7-4dd6-a7f0-0f7dfa092793)
 
-8-bit Assets:
+
+### 8-bit Assets:
 
 ![image](https://github.com/TrueMiguel/Christmas-Cookie-Clicker-Tycoon/assets/139652929/08f84f97-a12f-4b0d-ad4d-5c96eaf19c9e)
 
 ![image](https://github.com/TrueMiguel/Christmas-Cookie-Clicker-Tycoon/assets/139652929/7fdf7639-7ed2-4e6a-8834-abda201ef1a8)
 
-HomePage:
+
+### HomePage:
 
 (placeholder)
 
-GamePage:
+
+### GamePage:
 
 (placeholder)
 
 
 ### Video Showing Functionality
 
-Provide instructions and examples for use. Include screenshots as needed.
+(placeholder)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
