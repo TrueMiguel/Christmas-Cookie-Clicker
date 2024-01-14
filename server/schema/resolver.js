@@ -53,53 +53,22 @@ const resolvers = {
     removeAccount: async (parent, { profileId }) => {
       return Account.findOneAndDelete({ _id: profileId})
     },
-    
-    // updateUser: async (parent, { id, username }) => {
-    //   try {
-    //     const updatedUser = await Account.findByIdAndUpdate(
-    //       id,
-    //       { username },
-    //       { new: true }
-    //     );
-    //     return updatedUser;
-    //   } catch (error) {
-    //     throw new Error("Can not update user, please try again");
-    //   }
-    // },
-
-    // userLogin: async (parent, { username, password }) => {
-    //   try {
-    //     const userInfo = await Account.findOne({ username });
-
-    //     if (!userInfo) {
-    //       throw new Error("Incorrect user info");
-    //     }
-
-    //     const isCorrectPassword = await userInfo.correctPassword(password);
-    //     if (!isCorrectPassword) {
-    //       throw new Error("Incorrect password");
-    //     }
-    //     return { message: "Login successful", token: "yourAuthToken" };
-    //   } catch (error) {
-    //     throw new Error("Login failed");
-    //   }
-    // },
 
     // adding code for adding score
-    addScore: async (parent, args) => {
+    addScore: async (parent, { username, score }) => {
       try {
 
         // find the existing score or crate a new one
-        let currentScore = await Score.findOne({});
-        if (!currentScore) {
-          currentScore = new Score({ score: 0 });
+        let user = await Account.findOne({ username: username });
+        if (!user.score) {
+          user.score = 0;
         }
         
         // increment and save the score
-        currentScore.score = args.score;
-        await currentScore.save();
+        user.score = score;
+        await user.save();
         
-        return currentScore;
+        return user.score;
       }
       catch(error) {
         console.log(error);
@@ -107,9 +76,11 @@ const resolvers = {
     },
 
     // adding delete route for score
-    deleteScore: async (parent, args) => {
-
-      return Score.findOneAndDelete({})
+    deleteScore: async (parent, { profileId }) => {
+      let account = await Account.findById(profileId);
+      account.score = 0;
+      await account.save();
+      return { account };
     }
   },
 };
