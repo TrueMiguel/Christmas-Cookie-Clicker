@@ -8,6 +8,16 @@
   transition: transform 0.1s; /* Smooth transition for the effect */
 }
 
+header {
+  background-image: url(./assets/candy_stripe.jpg);
+  background-size: cover;
+  text-shadow: 
+  -1px -1px 0 darkred,
+  1px -1px 0 darkred, 
+  -1px 1px 0 darkred, 
+  1px 1px 0 darkred;
+}
+
 footer {
   position: fixed; /* or use 'position: absolute;' if you want it absolute at the bottom */
   bottom: 0;
@@ -16,6 +26,13 @@ footer {
   padding: 10px;
   text-align: center;
   height: 10vh;
+  background-image: url(./assets/candy_stripe.jpg);
+  background-size: cover;
+  text-shadow: 
+  -1px -1px 0 darkred,
+  1px -1px 0 darkred, 
+  -1px 1px 0 darkred, 
+  1px 1px 0 darkred;
 }
 
 .loadingContainer {
@@ -27,4 +44,19 @@ footer {
 
 .loadingImg {
   max-height: 75vh;
+}
+
+.title {
+  height: 75vh;
+  background-image: url(./assets/workshop-1.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  text-shadow: 
+  -2px -2px 0 darkred,
+  2px -2px 0 darkred, 
+  -2px 2px 0 darkred, 
+  2px 2px 0 darkred;
 }

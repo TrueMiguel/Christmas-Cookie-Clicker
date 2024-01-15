@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import Auth from '../utils/auth.js'; // need to add jwt-decode to package.json of client side for this
+import Auth from '../utils/auth.js'; 
 import { ADD_ACCOUNT } from '../utils/mutations';
 
 function Signup(props) {

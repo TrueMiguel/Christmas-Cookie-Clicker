@@ -1,5 +1,3 @@
-// may need to import useFunctions from react-router-dom if need be, and add react-router-dom to package.json 
-// import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth.js';
 
@@ -12,11 +10,11 @@ const Header = () => {
     };
 
     return (
-        <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
+        <header className=" text-light mb-2 py-3 flex-row align-center">
             <div className="container flex-row justify-space-between-lg d-flex justify-content-between align-center">
 
                 <div className='d-flex'>
-                    <h1 className="m-0">Get Your Jingle On!</h1>
+                    <h1 className="m-0 text-warning" >Get Your Jingle On!</h1>
                 </div>
                 <div className='d-flex'>
                     {Auth.loggedIn() ? (
@@ -26,7 +24,7 @@ const Header = () => {
                             <Link to="/login">
                                 <button type="button" className='btn btn-success'>Login</button>
                             </Link>
-                            <Link to="/signup">
+                            <Link to="/signup" className='ps-2'>
                             <button type="button" className='btn btn-success'>Signup</button>
                             </Link>
                         </>

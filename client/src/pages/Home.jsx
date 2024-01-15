@@ -1,11 +1,3 @@
-// Trying to set up the initial home page
-// need to have the title display along with a start button that when clicked changes to new game if no data or if there is a continute button with a delete score. 
-// since this is going to check for data going to use the 'useQuery' from the apollo client 
-
-// import { useQuery } from '@apollo/client'
-
-// need to make a queries util for use with the useQuery for the profiles. 
-
 // importing link and useLocation for navigation
 import { useMutation } from "@apollo/client";
 import { DELETE_SCORE } from "../utils/mutations";
@@ -34,14 +26,11 @@ export default function Home() {
         setProfile(auth.loggedIn());
     }, []);
 
-    // will use for later when checking data
-    // const { loading, data } = useQuery(QUERY_PROFILES);
-    // const profiles = data?.profiles || [];
 
     return(
         
-        <div className="title">
-            <h1>Christmas Cookie Clicker!</h1>
+        <div className="title p-4 text-warning">
+            <h1 className="">Christmas Cookie Clicker!</h1>
             {profile ? (
                 <>
                     <Link to="/game" > 
@@ -50,11 +39,11 @@ export default function Home() {
                     {loading ? 
                         <div>Deleting score...</div>
                         :
-                        <button type="button" className="btn btn-danger" onClick={resetScore}> Delete score!</button>
+                        <button type="button " className="btn btn-danger ps-2" onClick={resetScore}> Delete score!</button>
                     }
                 </>
             ) : 
-                <div>Please log in</div>
+                <h2 className="">Please log in</h2>
             }       
         </div>
         
