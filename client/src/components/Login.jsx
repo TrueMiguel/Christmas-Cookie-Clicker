@@ -42,41 +42,44 @@ const Login= () => {
 
   return (
     <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
-
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="username">Username:</label>
-          <input
-            placeholder=""
-            name="username"
-            type="username"
-            id="username"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="****"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+      <div className="login-sheet">
+        <Link to="/signup">← Go to Signup</Link>
+        <br />
+        <br />
+        <h2>Login</h2>
+        <form onSubmit={handleFormSubmit}>
+          <div className="flex-row space-between my-2">
+            <label htmlFor="username">Username:&nbsp;</label>
+            <input className="input-login"
+              placeholder=""
+              name="username"
+              type="username"
+              id="username"
+              onChange={handleChange}
+            />
           </div>
-        ) : null}
-        {loading ? <div>Signing in...</div> : 
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
-        }
-      </form>
+          <div className="flex-row space-between my-2">
+            <label htmlFor="pwd">Password:&nbsp;</label>
+            <input className="input-login"
+              placeholder="****"
+              name="password"
+              type="password"
+              id="pwd"
+              onChange={handleChange}
+            />
+          </div>
+          {error ? (
+            <div>
+              <p className="error-text">The provided credentials are incorrect</p>
+            </div>
+          ) : null}
+          {loading ? <div>Signing in...</div> : 
+          <div className="flex-row flex-end">
+            <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+          }
+        </form>
+      </div>
     </div>
   );
 }

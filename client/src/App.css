@@ -60,3 +60,38 @@ footer {
   -2px 2px 0 darkred, 
   2px 2px 0 darkred;
 }
+
+.container.my-1 {
+  /* width: 100%; */
+  height : 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  background-image: url(./assets/santa-coding.jpg);
+  background-size: cover;
+}
+
+.login-sheet {
+  background-color: white;
+  border-radius: 5%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  
+}
+
+h2 {
+  font-size: 2rem; /* Adjust the value as needed */
+}
+
+label {
+  font-size: 1.2rem; /* Adjust the value as needed */
+}
+
+.input-login {
+  font-size: 1rem; /* Adjust the value as needed */
+}
+
