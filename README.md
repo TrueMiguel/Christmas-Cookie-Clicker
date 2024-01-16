@@ -76,10 +76,15 @@ The application is accessible on various devices and screen sizes.
 
 ## Usage
 1.) Click the live link to enter the app: https://christmas-cookie-clicker.onrender.com/
+
 2.) Signup for the app.  Create a `Username and Password`, and click `"Submit"`.
+
 3.) You will automatically be logged in after Signup and taken to the Homepage. 
+
 4.) Click the `"Start Game"` button to go to the game page.
+
 5.) `Click the Cookie!` to earn points and upgrades.  
+
 6.) Click `"Save Score"` to do just that, `"Exit"` to go back to the Homepage, and `"Logout"` to you guessed.
 
 
