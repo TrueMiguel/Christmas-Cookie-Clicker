@@ -119,7 +119,7 @@ The application is accessible on various devices and screen sizes.
 
 ### GamePage:
 
-![jingle on](https://github.com/TrueMiguel/Christmas-Cookie-Clicker/assets/139652929/765574eb-4307-4e5b-a178-ecc1b4ddbf29)
+![gamepage2](https://github.com/TrueMiguel/Christmas-Cookie-Clicker/assets/139652929/4d05c552-69af-4d86-9cb2-49de1053a1bf)
 
 
 ## Credits
