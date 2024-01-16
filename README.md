@@ -1,7 +1,6 @@
 # Christmas Cookie Clicker Tycoon
 
-Website: URL
-![Screenshot](images/)
+Link to Deployed Website: https://christmas-cookie-clicker.onrender.com/
 
 ## Description
 
