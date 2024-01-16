@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom'; removed "Go to Login Link"
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth.js'; 
 import { ADD_ACCOUNT } from '../utils/mutations';
@@ -34,9 +34,6 @@ function Signup(props) {
   return (
     <div className="container my-1">
       <div className="signup-sheet">
-        <Link to="/login">← Go to Login</Link>
-        <br />
-        <br />
         <h2>Signup</h2>
         <form onSubmit={handleFormSubmit}>
           <div className="flex-row space-between my-2">
