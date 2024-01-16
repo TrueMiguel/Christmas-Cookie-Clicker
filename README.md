@@ -1,4 +1,4 @@
-# Christmas Cookie Clicker Tycoon
+# Christmas Cookie Clicker
 
 Link to Deployed Website: https://christmas-cookie-clicker.onrender.com/
 
@@ -8,7 +8,7 @@ Link to Deployed Website: https://christmas-cookie-clicker.onrender.com/
 
 Are you a Web Developer? Are you tired? Do you work remote or are you on a computer 24/7 and need a little distraction from the everyday grind?
 If code has got you down and you've been craving something sweet to bring you up, then look no further!
-Welcome to "CHRISTMAS-COOKIE-CLICKER-TYCOON!"  This Holiday season we're bringing you cookies! That's write, COOKIES!  And I don't mean the kind that store user data, 
+Welcome to "CHRISTMAS-COOKIE-CLICKER!"  This Holiday season we're bringing you cookies! That's write, COOKIES!  And I don't mean the kind that store user data, 
 there are no puns here.  Cookies so good they jump right off your monitor and into your face!  We got all the favorites, Gingerbread, Gingersnap House, and 
 don't forget about everyones favorite redundancy, the classic Sugar Cookie.  So jump in here, these cookies ain't gonna click themselves; besides, 
 it's better than that 9am conference call headed by Karen that you normally sleep through.  
@@ -42,16 +42,6 @@ to the cookie itself so we have a loading screen.
 
 5.) (Placeholder)
 
-
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
 
 ## User Story
 
@@ -91,17 +81,11 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 ## Usage
 Provide instructions and examples for use. Include screenshots as needed.
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-(placeholder)
 
 
 ## Screenshots
 
-### Wire Fram Drafts:
+### Wire Frame Drafts:
 
 ![cookie click bones](https://github.com/TrueMiguel/Christmas-Cookie-Clicker-Tycoon/assets/139652929/8f4683f2-e43d-491e-a427-c4d15430bdc9)
 
@@ -119,15 +103,21 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ### HomePage:
 
-(placeholder)
+![initial page](https://github.com/TrueMiguel/Christmas-Cookie-Clicker/assets/139652929/9dc2c127-8962-4131-897c-8fc53c3aa8bc)
+
+### Signup Page:
+
+![sign up page](https://github.com/TrueMiguel/Christmas-Cookie-Clicker/assets/139652929/6f142b9a-e095-4d71-86d1-288fa67dc5be)
+
+### Login Page:
+
+![login wit styling](https://github.com/TrueMiguel/Christmas-Cookie-Clicker/assets/139652929/e4227abc-72f6-4336-8ad1-38a0af55f839)
+
+
+
 
 
 ### GamePage:
-
-(placeholder)
-
-
-### Video Showing Functionality
 
 (placeholder)
 
