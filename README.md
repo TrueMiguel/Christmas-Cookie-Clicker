@@ -1,6 +1,8 @@
 # Christmas Cookie Clicker
 
-Link to Deployed Website: https://christmas-cookie-clicker.onrender.com/
+Deployed Website: https://christmas-cookie-clicker.onrender.com/
+
+GitHub repo: https://github.com/TrueMiguel/Christmas-Cookie-Clicker
 
 ## Description
 
@@ -37,10 +39,6 @@ Boredom, fidgeting, something quick and fun to do when your free time is very li
 to the cookie itself so we have a loading screen.
 
 3.) How to apply what we learned throughout our fullstack bootcamp
-
-4.) (Placeholder)
-
-5.) (Placeholder)
 
 
 ## User Story
@@ -101,9 +99,9 @@ The application is accessible on various devices and screen sizes.
 
 ### 8-bit Assets:
 
-![image](https://github.com/TrueMiguel/Christmas-Cookie-Clicker-Tycoon/assets/139652929/08f84f97-a12f-4b0d-ad4d-5c96eaf19c9e)
+![image](/client/src/assets/sc1.png)
 
-![image](https://github.com/TrueMiguel/Christmas-Cookie-Clicker-Tycoon/assets/139652929/7fdf7639-7ed2-4e6a-8834-abda201ef1a8)
+![image](/client/src/assets/sc2.png)
 
 
 ### HomePage:
