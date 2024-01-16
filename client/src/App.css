@@ -107,3 +107,21 @@ label {
 .input-signup {
   font-size: 1.2rem; /* Adjust the value as needed */
 }
+
+.gameContainer {
+  height: 75vh;
+  background-image: url(./assets/8bit_snow.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+}
+
+#status-side {
+  min-width: 25%;
+  text-shadow: 
+  -2px -2px 0 darkred,
+  2px -2px 0 darkred, 
+  -2px 2px 0 darkred, 
+  2px 2px 0 darkred;
+}

@@ -78,28 +78,28 @@ export default function Game() {
 
     return (
         // main container that will house the game
-        <div className="container">
+        <div className="container gameContainer">
             {loadQueryScore ? 
             <div className="loadingContainer">
             <div><img src={loadingImg} alt="sleeping Santa" className="loadingImg "/></div> 
             </div>
             : 
-                <div className="row">
+                <div className="d-flex w-50">
 
                     {/* sub containers that will house the clicker on the left and the status/options on the right */}
-                    <div id="clicker-side" className="col-9">
+                    <div id="clicker-side" className="col-9 p-3 d-flex align-items-center">
                         <img src={cookie} alt="gingerbread man" className="gb-m"
                         onClick={imgClick}
                         />
                     </div>
-                    <div id="status-side" className="col-3">
+                    <div id="status-side" className="col-3 p-2 text-warning">
                         <Link to="/">
                             <button type="button" className="btn btn-danger">Exit</button>
                         </Link>
                         {loadSaveScore ? <div>Saving</div> : 
-                            <button type="button" className="btn btn-success" onClick={() => handleAddScore(username, score)}>Save Score</button>
+                            <button type="button" className="btn btn-success my-2" onClick={() => handleAddScore(username, score)}>Save Score</button>
                         }
-                        <div id="score" className="border border-dark"> Total score: {score}</div>
+                        <h3 id="score" className=""> Total score: {score}</h3>
                         {/* need to add line break here */}
 
                         <h2>Cookies:</h2>
