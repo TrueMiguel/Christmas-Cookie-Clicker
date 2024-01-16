@@ -49,7 +49,7 @@ const Login= () => {
         <h2>Login</h2>
         <form onSubmit={handleFormSubmit}>
           <div className="flex-row space-between my-2">
-            <label htmlFor="username">Username:&nbsp;</label>
+            <label htmlFor="username">Username:&nbsp;&nbsp;</label>
             <input className="input-login"
               placeholder=""
               name="username"
@@ -59,7 +59,7 @@ const Login= () => {
             />
           </div>
           <div className="flex-row space-between my-2">
-            <label htmlFor="pwd">Password:&nbsp;</label>
+            <label htmlFor="pwd">Password:&nbsp;&nbsp;</label>
             <input className="input-login"
               placeholder="****"
               name="password"
