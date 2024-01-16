@@ -75,12 +75,19 @@ The application is accessible on various devices and screen sizes.
 
 
 ## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
-
+1.)  clone the repo from github: https://github.com/TrueMiguel/Christmas-Cookie-Clicker
+2.) Open in vsCode.
+3.) In a terminal run `"npm i"` in the root directory to install all necessary dependedencies and dev dependencies in root, client, and server directories
+4.) run `"npm run start"` to run the app on localhost.  
+5.) Open in web browser and proceed to `"Usage Instructions"`
 
 ## Usage
-Provide instructions and examples for use. Include screenshots as needed.
+1.) Click the live link to enter the app: https://christmas-cookie-clicker.onrender.com/
+2.) Signup for the app.  Create a `Username and Password`, and click `"Submit"`.
+3.) You will automatically be logged in after Signup and taken to the Homepage. 
+4.) Click the `"Start Game"` button to go to the game page.
+5.) `Click the Cookie!` to earn points and upgrades.  
+6.) Click `"Save Score"` to do just that, `"Exit"` to go back to the Homepage, and `"Logout"` to you guessed.
 
 
 ## Screenshots
@@ -114,12 +121,9 @@ Provide instructions and examples for use. Include screenshots as needed.
 ![login wit styling](https://github.com/TrueMiguel/Christmas-Cookie-Clicker/assets/139652929/e4227abc-72f6-4336-8ad1-38a0af55f839)
 
 
-
-
-
 ### GamePage:
 
-(placeholder)
+![jingle on](https://github.com/TrueMiguel/Christmas-Cookie-Clicker/assets/139652929/765574eb-4307-4e5b-a178-ecc1b4ddbf29)
 
 
 ## Credits
