@@ -74,13 +74,6 @@ The application has a responsive and polished UI.
 The application is accessible on various devices and screen sizes.
 
 
-## Installation
-1.)  clone the repo from github: https://github.com/TrueMiguel/Christmas-Cookie-Clicker
-2.) Open in vsCode.
-3.) In a terminal run `"npm i"` in the root directory to install all necessary dependedencies and dev dependencies in root, client, and server directories
-4.) run `"npm run start"` to run the app on localhost.  
-5.) Open in web browser and proceed to `"Usage Instructions"`
-
 ## Usage
 1.) Click the live link to enter the app: https://christmas-cookie-clicker.onrender.com/
 2.) Signup for the app.  Create a `Username and Password`, and click `"Submit"`.
